@@ -36,4 +36,17 @@ class UsersController < ApplicationController
     redirect_to(next_url)
     
   end
+
+  def create
+    input_username = params.fetch("new_user_username")
+
+    new_user = User.new
+    new_user.username = input_username
+
+    new_user.save
+
+    next_url = "/users/" + new_user.username
+    redirect_to(next_url)
+    
+  end
 end

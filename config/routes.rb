@@ -17,4 +17,6 @@ Rails.application.routes.draw do
 
   get("/update_user/:path_id", { :controller => "users", :action => "update" })
 
+  get("/new_user", { :controller => "users", :action => "create" })
+
 end
