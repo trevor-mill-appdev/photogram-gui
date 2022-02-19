@@ -13,4 +13,8 @@ Rails.application.routes.draw do
 
   get("/update_photo/:path_id", { :controller => "photos", :action => "update" })
 
+  get("/", { :controller => "users", :action => "index" })
+
+  get("/update_user/:path_id", { :controller => "users", :action => "update" })
+
 end
